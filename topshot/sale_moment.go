@@ -12,7 +12,7 @@ import (
 func GetSaleMomentFromOwnerAtBlock(flowClient *client.Client, blockHeight uint64, ownerAddress flow.Address, momentFlowID uint64) (*SaleMoment, error) {
 	getSaleMomentScript := `
 		import TopShot from 0x0b2a3299cc857e29
-        import TopShotMarketV3 from 0xc1e4f4f4c4257510
+        import Market from 0xc1e4f4f4c4257510
         pub struct SaleMoment {
           pub var id: UInt64
           pub var playId: UInt32
@@ -34,7 +34,7 @@ func GetSaleMomentFromOwnerAtBlock(flowClient *client.Client, blockHeight uint64
 
 		pub fun main(owner:Address, momentID:UInt64): SaleMoment {
 			let acct = getAccount(owner)
-            let collectionRef = acct.getCapability(/public/topshotSaleCollection)!.borrow<&{TopShotMarketV3.SalePublic}>() ?? panic("Could not borrow capability from public collection")
+            let collectionRef = acct.getCapability(/public/topshotSaleCollection)!.borrow<&{Market.SalePublic}>() ?? panic("Could not borrow capability from public collection")
 			return SaleMoment(moment: collectionRef.borrowMoment(id: momentID)!,price: collectionRef.getPrice(tokenID: momentID)!)
 		}
 `
