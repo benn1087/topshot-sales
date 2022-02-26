@@ -12,7 +12,7 @@ import (
 func GetSaleMomentFromOwnerAtBlock(flowClient *client.Client, blockHeight uint64, ownerAddress flow.Address, momentFlowID uint64) (*SaleMoment, error) {
 	getSaleMomentScript := `
 		import TopShot from 0x0b2a3299cc857e29
-        import Market from 0xc1e4f4f4c4257510
+        import TopShotMarketV3 from 0xc1e4f4f4c4257510
         pub struct SaleMoment {
           pub var id: UInt64
           pub var playId: UInt32
