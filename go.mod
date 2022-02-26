@@ -1,4 +1,4 @@
-module github.com/rrrkren/topshot-sales
+module github.com/benn1087/topshot-sales
 
 go 1.15
 
