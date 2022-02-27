@@ -1,4 +1,4 @@
-package topshot
+package topshot1
 
 import (
 	"fmt"
