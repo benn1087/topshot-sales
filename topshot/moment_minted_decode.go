@@ -28,5 +28,5 @@ func (evt MomentMintedEvent) serialNumber() uint32 {
 
 func (evt MomentMintedEvent) String() string {
 	return fmt.Sprintf("moment mint4ed: momentid: %d, playid: %d, setid: %d, serialnum: %d",
-		evt.Id(), evt.PlayId(), evt.SetID(), evt.serialNumber())
+		evt.Id(), evt.PlayId(), evt.SetId(), evt.serialNumber())
 }
