@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/onflow/cadence"
-	"github.com/onflow/flow-go-sdk"
+	//"github.com/onflow/flow-go-sdk"
 )
 // pub event MomentMinted(momentID: UInt64, playID: UInt32, setID: UInt32, serialNumber: UInt32)
 type MomentMintedEvent cadence.Event
